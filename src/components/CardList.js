@@ -22,7 +22,7 @@ export default function CardList() {
         <Card variant="outlined" sx={{minWidth: 275}}>
         <CardContent>
           <Typography sx={{ fontSize: 24 }} backgroundColor="lightgray" color="text.primary" gutterBottom>
-            This is maybe a lottie animation
+            I am a full stack web developer with a unique background as a theatre artist and producer
           </Typography>
           <div id="test">
 
@@ -33,14 +33,14 @@ export default function CardList() {
         <Card variant="outlined" sx={{minWidth: 275}}>
         <CardContent>
           <Typography sx={{ fontSize: 24 }} backgroundColor="lightgray" color="text.primary" gutterBottom>
-            This is maybe a lottie animation
+            I bring my soft skills as a theatre producer into software development, building out-of-the-box solutions for companies and clients alike
           </Typography>
         </CardContent>
         </Card>
         <Card variant="outlined" sx={{minWidth: 275}}>
         <CardContent>
           <Typography sx={{ fontSize: 24 }} backgroundColor="lightgray" color="text.primary" gutterBottom>
-            This is maybe a lottie animation
+            My process begins with a conversation, and thrives in the world of creative problem sovling
           </Typography>
         </CardContent>
         </Card>
