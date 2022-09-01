@@ -3,7 +3,8 @@ import { Box } from "@mui/system";
 import lottie from 'lottie-web';
 import { useEffect } from "react";
 import Test from '../lotties/108322-circle-chart.json';
-
+import Rocket from '../lotties/116204-flying-rocket-in-the-sky.json';
+import Globe from '../lotties/69115-spinning-globe-orange.json'
 
 export default function CardList() {
 
@@ -14,7 +15,17 @@ export default function CardList() {
     lottie.loadAnimation({
       container: document.querySelector("#test"),
       animationData: Test
-    })
+    });
+
+    lottie.loadAnimation({
+      container: document.querySelector("#rocket"),
+      animationData: Rocket
+    });
+
+    lottie.loadAnimation({
+      container: document.querySelector("#globe"),
+      animationData: Globe
+    });
   }, []);
 
   return (
@@ -25,7 +36,6 @@ export default function CardList() {
             I am a full stack web developer with a unique background as a theatre artist and producer
           </Typography>
           <div id="test">
-            <p>Did this work</p>
           </div>
         </CardContent>
         </Card>
@@ -34,6 +44,8 @@ export default function CardList() {
           <Typography sx={{ fontSize: 24 }} backgroundColor="lightgray" color="text.primary" gutterBottom>
             I bring my soft skills as a theatre producer into software development, building out-of-the-box solutions for companies and clients alike
           </Typography>
+          <div id="rocket">
+          </div>
         </CardContent>
         </Card>
         <Card variant="outlined" sx={{minWidth: 275}}>
@@ -41,6 +53,8 @@ export default function CardList() {
           <Typography sx={{ fontSize: 24 }} backgroundColor="lightgray" color="text.primary" gutterBottom>
             My process begins with a conversation, and thrives in the world of creative problem sovling
           </Typography>
+          <div id="globe">
+          </div>
         </CardContent>
         </Card>
       </Box>
