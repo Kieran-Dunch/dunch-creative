@@ -25,9 +25,8 @@ export default function CardList() {
             I am a full stack web developer with a unique background as a theatre artist and producer
           </Typography>
           <div id="test">
-
+            <p>Did this work</p>
           </div>
-          <p>Did this work</p>
         </CardContent>
         </Card>
         <Card variant="outlined" sx={{minWidth: 275}}>
