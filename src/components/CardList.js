@@ -30,32 +30,32 @@ export default function CardList() {
 
   return (
       <Box sx={{ display: "flex", justifyContent: "space-around"}}>
-        <Card variant="outlined" sx={{minWidth: 275}}>
-        <CardContent>
-          <Typography sx={{ fontSize: 24 }} backgroundColor="lightgray" color="text.primary" gutterBottom>
-            I am a full stack web developer with a unique background as a theatre artist and producer
-          </Typography>
-          <div id="test">
-          </div>
-        </CardContent>
+        <Card variant="outlined" sx={{minWidth: "275px", height: "500px"}}>
+          <CardContent>
+            <Typography sx={{ fontSize: 24 }} backgroundColor="lightgray" color="text.primary" gutterBottom>
+              I am a full stack web developer with a unique background as a theatre artist and producer
+            </Typography>
+            <div id="test">
+            </div>
+          </CardContent>
         </Card>
-        <Card variant="outlined" sx={{minWidth: 275}}>
-        <CardContent>
-          <Typography sx={{ fontSize: 24 }} backgroundColor="lightgray" color="text.primary" gutterBottom>
-            I bring my soft skills as a theatre producer into software development, building out-of-the-box solutions for companies and clients alike
-          </Typography>
-          <div id="rocket">
-          </div>
-        </CardContent>
+        <Card variant="outlined" sx={{minWidth: "275px", height: "500px"}}>
+          <CardContent>
+            <Typography sx={{ fontSize: 24 }} backgroundColor="lightgray" color="text.primary" gutterBottom>
+              I bring my soft skills as a theatre producer into software development, building out-of-the-box solutions for companies and clients alike
+            </Typography>
+            <div id="rocket">
+            </div>
+          </CardContent>
         </Card>
-        <Card variant="outlined" sx={{minWidth: 275}}>
-        <CardContent>
-          <Typography sx={{ fontSize: 24 }} backgroundColor="lightgray" color="text.primary" gutterBottom>
-            My process begins with a conversation, and thrives in the world of creative problem sovling
-          </Typography>
-          <div id="globe">
-          </div>
-        </CardContent>
+        <Card variant="outlined" sx={{minWidth: "275px", height: "500px"}}>
+          <CardContent>
+            <Typography sx={{ fontSize: 24 }} backgroundColor="lightgray" color="text.primary" gutterBottom>
+              My process begins with a conversation, and thrives in the world of creative problem sovling
+            </Typography>
+            <div id="globe">
+            </div>
+          </CardContent>
         </Card>
       </Box>
   )
