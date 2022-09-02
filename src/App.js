@@ -4,12 +4,22 @@ import Header from './components/Header'
 import Footer from './components/Footer';
 import CardList from './components/CardList';
 import { Button, Card, Typography } from '@mui/material';
+import { useState } from 'react';
+import ContactMe from './components/ContactMe';
 
 function App() {
+
+
+  const [page, setPage] = useState("contact")
 
   return (
     <div className="App">
       <NavBar/>
+      { page === "contact" &&
+        <ContactMe/>
+      }
+      { page === "home" &&
+      <>
       <Header/>
       <CardList/>
       <Card
@@ -32,6 +42,8 @@ function App() {
           Contact Me
         </Button>
       </Card>
+      </>
+      }
       <Footer/>
     </div>
   );

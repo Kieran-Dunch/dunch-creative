@@ -14,7 +14,9 @@ export default function Footer() {
           flexGrow: "1",
           backgroundColor: "slateblue",
           height: "150px",
-          justifyContent: "space-evenly"
+          justifyContent: "space-evenly",
+          position: "fixed",
+          bottom: 0,
         }}
       >
         <div>
