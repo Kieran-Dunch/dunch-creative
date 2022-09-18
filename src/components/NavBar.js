@@ -11,7 +11,7 @@ const pages = ['Home', 'About', 'Projects'];
 const NavBar = () => {
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Container maxWidth="95%">
         <Toolbar disableGutters>
           <Typography
