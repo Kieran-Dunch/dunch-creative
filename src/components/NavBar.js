@@ -4,47 +4,61 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 const pages = ['Home', 'About', 'Projects'];
 
 const NavBar = () => {
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Container maxWidth="95%">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
             }}
           >
-            Dunch Creative
+            <Link
+              to="/"
+              style={{ color: 'white', textDecoration: 'none', }}
+            >
+              Dunch Creative
+            </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "space-evenly" }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                sx={{ my: 2, color: 'white', display: 'block', backgroundColor: "slateblue" }}
+            <Button
+              sx={{ my: 2, color: 'white', display: 'block', backgroundColor: "slateblue" }}
+            >
+              <Link to='/about' style={{ textDecoration: 'none', color: 'white' }}>About</Link>
+            </Button>
+            <Button
+              sx={{ my: 2, color: 'white', display: 'block', backgroundColor: "slateblue" }}
+            >
+              <Link
+                to='/projects'
+                style={{ textDecoration: 'none', color: 'white' }}
               >
-                {page}
-              </Button>
-            ))}
+                Projects
+              </Link>
+            </Button>
           </Box>
           <Box>
             <Button
               sx={{ my: 2, color: 'white', display: 'block', backgroundColor: "slateblue" }}
             >
-              Contact me
+              <Link
+                to='/contact'
+                style={{ textDecoration: 'none', color: 'white' }}
+              >
+                Contact Me
+              </Link>
             </Button>
           </Box>
         </Toolbar>
