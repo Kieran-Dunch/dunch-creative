@@ -4,14 +4,16 @@ import Header from './components/Header'
 import Footer from './components/Footer';
 import CardList from './components/CardList';
 import { Button, Card, Typography } from '@mui/material';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
 
   return (
     <div className="App">
-      <NavBar/>
-      <Header/>
-      <CardList/>
+      <BrowserRouter />
+      <NavBar />
+      <Header />
+      <CardList />
       <Card
         variant="outlined"
         sx={{
@@ -32,7 +34,7 @@ function App() {
           Contact Me
         </Button>
       </Card>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
