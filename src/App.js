@@ -1,9 +1,6 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import Header from './components/Header'
 import Footer from './components/Footer';
-import CardList from './components/CardList';
-import { Button, Card, Typography } from '@mui/material';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
