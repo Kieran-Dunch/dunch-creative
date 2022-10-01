@@ -18,21 +18,14 @@ export default function ContactMe() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_d5kf258",
-        "template_mtbhwpf",
-        form.current,
-        "a1zim3VRUpmbUG3r0"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm("service_d5kf258", "template_mtbhwpf", form.current, "a1zim3VRUpmbUG3r0").then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
     wipeForm();
 
     window.alert("Your message has been sent.");
