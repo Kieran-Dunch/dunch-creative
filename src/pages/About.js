@@ -9,7 +9,7 @@ export default function About() {
       </h1>
       <Card>
         <p>Kieran dunch is a developer blah blah blah</p>
-        <img src="../../public/_MG_3186.JPG" alt="Kieran at a computer" />
+        <img src="Kieran_mic_pic.jpeg" alt="Kieran at a computer" />
       </Card>
       <Card>
         <p>Kieran dunch is an artist blah blah blah</p>
@@ -17,7 +17,7 @@ export default function About() {
       </Card>
       <Card>
         <p>Kieran dunch Likes to hike!</p>
-        <img src="../../public/_MG_3186.JPG" alt="Woyzeck stuff" />
+        <img src="../../public/_MG_3186.JPG" alt="Hike stuff" />
       </Card>
     </>
   );
