@@ -1,32 +1,41 @@
 import { Button, Container, TextField, Typography } from "@mui/material";
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
 export default function ContactMe() {
   const form = useRef();
-  const [nameValue, setNameValue] = useState('')
-  const [emailValue, setEmailValue] = useState('')
-  const [messageValue, setMessageValue] = useState('')
+  const [nameValue, setNameValue] = useState("");
+  const [emailValue, setEmailValue] = useState("");
+  const [messageValue, setMessageValue] = useState("");
 
   const wipeForm = () => {
-    setNameValue('')
-    setEmailValue('')
-    setMessageValue('')
-  }
+    setNameValue("");
+    setEmailValue("");
+    setMessageValue("");
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_d5kf258', 'template_mtbhwpf', form.current, 'a1zim3VRUpmbUG3r0')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-    wipeForm()
+    emailjs
+      .sendForm(
+        "service_d5kf258",
+        "template_mtbhwpf",
+        form.current,
+        "a1zim3VRUpmbUG3r0"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    wipeForm();
 
-    window.alert('Your message has been sent.')
+    window.alert("Your message has been sent.");
   };
 
   const onChange = (e) => {
@@ -83,4 +92,4 @@ export default function ContactMe() {
       </form>
     </Container>
   );
-};
+}
