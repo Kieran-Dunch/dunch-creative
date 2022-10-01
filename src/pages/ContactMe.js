@@ -40,25 +40,23 @@ export default function ContactMe() {
 
   const onChange = (e) => {
     switch (e.target.name) {
-      case 'from_email':
-        setEmailValue(e.target.value)
-        break
-      case 'from_name':
-        setNameValue(e.target.value)
-        break
-      case 'message':
-        setMessageValue(e.target.value)
-        break
+      case "from_email":
+        setEmailValue(e.target.value);
+        break;
+      case "from_name":
+        setNameValue(e.target.value);
+        break;
+      case "message":
+        setMessageValue(e.target.value);
+        break;
       default:
-        console.log('error')
+        console.log("error");
     }
-  }
+  };
 
   return (
     <Container>
-      <Typography>
-        Let’s see what we can create together!
-      </Typography>
+      <Typography> Let’s see what we can create together!</Typography>
       <form ref={form} onSubmit={sendEmail}>
         <TextField
           value={nameValue}
