@@ -1,10 +1,17 @@
-import { Box, Button, List, ListItemButton, ListItemIcon, ListItemText, Stack } from '@mui/material'
-import './Footer.css'
-import { Email, GitHub, LinkedIn } from '@mui/icons-material';
+import {
+  Box,
+  Button,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Stack
+} from "@mui/material";
+import "./Footer.css";
+import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 
 export default function Footer() {
-
-  const pages = ['Home', 'About', 'Projects', 'Contact'];
+  const pages = ["Home", "About", "Projects", "Contact"];
 
   return (
     <footer>
@@ -15,26 +22,25 @@ export default function Footer() {
           backgroundColor: "slateblue",
           height: "150px",
           justifyContent: "space-evenly",
-          bottom: 0,
-        }}
-      >
+          bottom: 0
+        }}>
         <div>
           <h2>Dunch Creative: Bringing the arts and tech together</h2>
-          <p><em>Copyright Dunch Creative 2022</em></p>
+          <p>
+            <em>Copyright Dunch Creative 2022</em>
+          </p>
         </div>
         <Box
           sx={{
             flexGrow: 1,
-            display: { xs: 'none', md: 'flex' },
+            display: { xs: "none", md: "flex" },
             justifyContent: "space-evenly",
             alignItems: "center"
-          }}
-        >
+          }}>
           {pages.map((page) => (
             <Button
               key={page}
-              sx={{ my: 2, color: 'white', display: 'inline-block', backgroundColor: "blue" }}
-            >
+              sx={{ my: 2, color: "white", display: "inline-block", backgroundColor: "blue" }}>
               {page}
             </Button>
           ))}
@@ -64,5 +70,5 @@ export default function Footer() {
         </div>
       </Box>
     </footer>
-  )
+  );
 }

@@ -1,14 +1,13 @@
-import './App.css';
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import ContactMe from './pages/ContactMe';
+import "./App.css";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import ContactMe from "./pages/ContactMe";
 
 function App() {
-
   return (
     <div className="App">
       <BrowserRouter>
