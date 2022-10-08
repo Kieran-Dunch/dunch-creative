@@ -1,4 +1,5 @@
 import { Card, Grid } from "@mui/material";
+import "./Projects.css";
 
 // I want to refactor cardlist to be used here
 // add stack in descriptions
@@ -37,10 +38,14 @@ export default function Projects() {
       <h1>My Projects</h1>
       <Grid container spacing={3}>
         {projects.map((project) => (
-          <Grid item xs={4} key={project.name}>
-            <Card>
-              <h2>{project.name}</h2>
-              <p>{project.desc}</p>
+          <Grid
+            item
+            xs={4}
+            key={project.name}
+            onClick={(e) => e.target.classList.toggle("flipped")}>
+            <Card className="card">
+              <h2 className="front">{project.name}</h2>
+              <p className="back">{project.desc}</p>
             </Card>
           </Grid>
         ))}
