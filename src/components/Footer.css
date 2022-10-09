@@ -1,0 +1,9 @@
+footer {
+  width: "100%";
+  bottom: 0;
+  position: "sticky"
+}
+
+.about-title {
+  margin-top: 60px;
+}
