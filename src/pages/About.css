@@ -1,0 +1,14 @@
+.container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container img {
+  height: 500px;
+}
+
+.container .text {
+  width: 500px;
+  background-color: rgb(159, 159, 159, 0.8);
+}
