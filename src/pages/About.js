@@ -1,18 +1,16 @@
 // import { Card } from "@mui/material";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import "./About.css";
 
 export default function About() {
   return (
-    <Parallax pages={5} className="background">
-      <ParallaxLayer offset={0} speed={1} factor={1} />
-      <ParallaxLayer offset={0.2} speed={0.05}>
+    <div className="background">
+      <div>
         <h1 className="about-title">
           This page will features several text boxes with three core paragraphs with photograph
           banners and side images
         </h1>
-      </ParallaxLayer>
-      <ParallaxLayer sticky={{ start: 0.5, end: 0.5 }}>
+      </div>
+      <div>
         <div className="container">
           <div>
             <h2>Developer</h2>
@@ -35,15 +33,15 @@ export default function About() {
           </div>
           <img src="Kieran_mic_pic.jpeg" alt="Kieran holding a microphone speaking to a crowd" />
         </div>
-      </ParallaxLayer>
-      <ParallaxLayer sticky={{ start: 2.0, end: 2.9 }} style={{ zIndex: "-1" }}>
-        <video width="100%" autoPlay muted loop>
-          <source src="WoyzeckTrailer.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </ParallaxLayer>
-      <ParallaxLayer offset={3.2} speed={0.3} factor={0.5}>
-        <div className="container">
+      </div>
+      <div className="artist container">
+        <div className="background-video">
+          <video width="100%" autoPlay muted loop>
+            <source src="WoyzeckTrailer.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div id="artist-text">
           <img
             src="AWAD-whale.JPG"
             alt="A ten foot long Orca Whale puppet made from plastic bags"
@@ -71,25 +69,24 @@ export default function About() {
             </p>
           </div>
         </div>
-      </ParallaxLayer>
-      <ParallaxLayer
-        offset={4}
-        speed={1}
-        style={{
-          backgroundImage: 'url("magog.JPG")',
-          backgroundSize: "cover"
-        }}
-      />
-      <ParallaxLayer offset={4}>
+      </div>
+      <div className="hiking">
         <div className="container">
           <div className="text">
             <h2>Life</h2>
-            <p>Kieran dunch Likes to hike!</p>
+            <p>
+              Kieran isn&apos;t just a coder and artist, he&apos;s also a backcountry camper! On his
+              blog Backpacking Boi, Kieran reviews trails and equipment for backcountry camping and
+              other outdoor sports. He loves surfing, rock climbing, bouldering and cross-country
+              skiing too. In 2022, he was awarded the Gold Duke of Edinburgh&apos;s Award, an
+              international award for outdoor activity, volunteer service, physical activity and
+              self-improvement.
+            </p>
           </div>
           <img src="magog.JPG" alt="Kieran in front of a  glacier lake" />
           <img src="Assiniboine.JPG" alt="Kieran in front of Mount Assiniboine" />
         </div>
-      </ParallaxLayer>
-    </Parallax>
+      </div>
+    </div>
   );
 }

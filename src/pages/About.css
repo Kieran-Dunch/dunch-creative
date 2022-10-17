@@ -1,5 +1,5 @@
 .container {
-  padding-top: 100px;
+  height: 95vh;
   display: flex;
   justify-content: space-around;
 }
@@ -11,4 +11,26 @@
 .container .text {
   width: 500px;
   background-color: rgb(159, 159, 159, 0.8);
+}
+
+.background-video {
+  width: 100%;
+  z-index: -1;
+}
+
+.artist {
+  position: relative;
+}
+
+#artist-text {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  top: 35%;
+}
+
+.hiking {
+  height: 100%;
+  background-image: url("../../public/magog.JPG");
+  background-size: cover;
 }
