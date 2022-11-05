@@ -11,6 +11,8 @@ import {
 import "./Footer.css";
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 
+// TODO: footer doesn't stick
+
 export default function Footer() {
   const pages = ["Home", "About", "Projects", "Contact"];
 
@@ -37,7 +39,9 @@ export default function Footer() {
             alignItems: "center"
           }}>
           {pages.map((page) => (
-            <Button key={page}>{page}</Button>
+            <Button variant="contained" key={page}>
+              {page}
+            </Button>
           ))}
         </Box>
         <Box>
