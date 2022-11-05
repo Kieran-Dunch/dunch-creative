@@ -1,11 +1,10 @@
-import { Card, Grid } from "@mui/material";
+import { Card, Grid, Typography } from "@mui/material";
 // styles
 import "./Projects.css";
 
-// I want to refactor cardlist to be used here
-// add stack in descriptions
 // TODO: add proper styling and css animations to the cards
 // TODO: add links to the proper hosting pages
+// TODO: change animation to scroll, add background pictures, and hover to lift it off the page
 export default function Projects() {
   const projects = [
     {
@@ -36,7 +35,7 @@ export default function Projects() {
 
   return (
     <>
-      <h1>My Projects</h1>
+      <Typography variant="h2">My Projects</Typography>
       <Grid container spacing={3}>
         {projects.map((project) => (
           <Grid
@@ -45,8 +44,12 @@ export default function Projects() {
             key={project.name}
             onClick={(e) => e.target.classList.toggle("flipped")}>
             <Card className="card">
-              <h2 className="front">{project.name}</h2>
-              <p className="back">{project.desc}</p>
+              <Typography variant="h3" className="front">
+                {project.name}
+              </Typography>
+              <Typography className="back" variant="body1">
+                {project.desc}
+              </Typography>
             </Card>
           </Grid>
         ))}

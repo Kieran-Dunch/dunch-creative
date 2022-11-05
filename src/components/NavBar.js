@@ -16,46 +16,28 @@ const NavBar = () => {
             noWrap
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              display: { md: "flex" },
               fontWeight: 700,
               letterSpacing: ".3rem"
             }}>
-            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+            <Link to="/" style={{ color: "#fff", textDecoration: "none" }}>
               Dunch Creative
             </Link>
           </Typography>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "space-evenly"
-            }}>
-            <Button
-              sx={{
-                my: 2,
-                color: "white",
-                display: "block",
-                backgroundColor: "slateblue"
-              }}>
+          <Box sx={{ flexGrow: 1, display: { md: "flex" }, justifyContent: "space-evenly" }}>
+            <Button sx={{ my: 2, color: "white", display: "block" }}>
               <Link to="/about" style={{ textDecoration: "none", color: "white" }}>
                 About
               </Link>
             </Button>
-            <Button
-              sx={{
-                my: 2,
-                color: "white",
-                display: "block",
-                backgroundColor: "slateblue"
-              }}>
+            <Button sx={{ my: 2, color: "white", display: "block" }}>
               <Link to="/projects" style={{ textDecoration: "none", color: "white" }}>
                 Projects
               </Link>
             </Button>
           </Box>
           <Box>
-            <Button sx={{ my: 2, color: "white", display: "block", backgroundColor: "slateblue" }}>
+            <Button sx={{ my: 2, color: "white", display: "block" }}>
               <Link to="/contact" style={{ textDecoration: "none", color: "white" }}>
                 Contact Me
               </Link>
