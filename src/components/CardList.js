@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import lottie from "lottie-web";
 import { useEffect } from "react";
@@ -28,52 +28,40 @@ export default function CardList() {
   }, []);
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-      <Card variant="outlined" sx={{ minWidth: "275px", height: "500px" }}>
-        <CardContent>
-          <Typography
-            sx={{
-              fontSize: 24
-            }}
-            backgroundColor="lightgray"
-            color="text.primary"
-            gutterBottom>
-            I am a full stack web developer with a unique background as a theatre artist and
-            producer
-          </Typography>
-          <Box id="discs"></Box>
-        </CardContent>
-      </Card>
-      <Card variant="outlined" sx={{ minWidth: "275px", height: "500px" }}>
-        <CardContent>
-          <Typography
-            sx={{
-              fontSize: 24
-            }}
-            backgroundColor="lightgray"
-            color="text.primary"
-            gutterBottom>
-            I bring my soft skills as a theatre producer into software development, building
-            out-of-the-box solutions for companies and clients alike
-          </Typography>
-          <Box id="rocket"></Box>
-        </CardContent>
-      </Card>
-      <Card variant="outlined" sx={{ minWidth: "275px", height: "500px" }}>
-        <CardContent>
-          <Typography
-            sx={{
-              fontSize: 24
-            }}
-            backgroundColor="lightgray"
-            color="text.primary"
-            gutterBottom>
-            My process begins with a conversation, and thrives in the world of creative problem
-            solving
-          </Typography>
-          <Box id="globe"></Box>
-        </CardContent>
-      </Card>
-    </Box>
+    <Grid container spacing={3}>
+      <Grid item xs={4}>
+        <Card variant="outlined" sx={{ minWidth: "275px", height: "500px", mx: "2" }}>
+          <CardContent>
+            <Typography variant="h6">
+              I am a full stack web developer with a unique background as a theatre artist and
+              producer
+            </Typography>
+            <Box id="discs"></Box>
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid item xs={4}>
+        <Card variant="outlined" sx={{ minWidth: "275px", height: "500px", mx: "2" }}>
+          <CardContent>
+            <Typography variant="h6">
+              I bring my soft skills as a theatre producer into software development, building
+              out-of-the-box solutions for companies and clients alike
+            </Typography>
+            <Box id="rocket"></Box>
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid item xs={4}>
+        <Card variant="outlined" sx={{ minWidth: "275px", height: "500px", mx: "2" }}>
+          <CardContent>
+            <Typography variant="h6">
+              My process begins with a conversation, and thrives in the world of creative problem
+              solving
+            </Typography>
+            <Box id="globe"></Box>
+          </CardContent>
+        </Card>
+      </Grid>
+    </Grid>
   );
 }

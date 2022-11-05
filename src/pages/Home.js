@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
       <CardList />
       <Card
@@ -20,16 +20,8 @@ export default function Home() {
           Whether your project involves arts and culture, tech, education or outdoor adventure,
           I&apos;d love to hear from you!
         </Typography>
-        <Button
-          sx={{
-            my: 2,
-            color: "white",
-            display: "block",
-            backgroundColor: "slateblue"
-          }}>
-          Contact Me
-        </Button>
+        <Button>Contact Me</Button>
       </Card>
-    </div>
+    </>
   );
 }
