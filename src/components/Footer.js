@@ -5,7 +5,8 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Stack
+  Stack,
+  Typography
 } from "@mui/material";
 import "./Footer.css";
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
@@ -18,33 +19,29 @@ export default function Footer() {
       <Box
         sx={{
           display: "flex",
-          backgroundColor: "slateblue",
-          height: "150px",
-          justifyContent: "space-evenly"
+          backgroundColor: "background.paper",
+          height: "100px",
+          justifyContent: "space-between",
+          alignItems: "center"
         }}>
-        <div>
-          <h2>Dunch Creative: Bringing the arts and tech together</h2>
-          <p>
+        <Box>
+          <Typography>
             <em>Copyright Dunch Creative 2022</em>
-          </p>
-        </div>
+          </Typography>
+        </Box>
         <Box
           sx={{
-            flexGrow: 1,
-            display: { xs: "none", md: "flex" },
+            flexGrow: "1",
+            display: "flex",
             justifyContent: "space-evenly",
             alignItems: "center"
           }}>
           {pages.map((page) => (
-            <Button
-              key={page}
-              sx={{ my: 2, color: "white", display: "inline-block", backgroundColor: "blue" }}>
-              {page}
-            </Button>
+            <Button key={page}>{page}</Button>
           ))}
         </Box>
-        <div>
-          <h3>Find me on:</h3>
+        <Box>
+          <Typography variant="h6">Find me on:</Typography>
           <List component={Stack} direction="row">
             <ListItemButton>
               <ListItemIcon>
@@ -65,7 +62,7 @@ export default function Footer() {
               <ListItemText primary="LinkedIn" />
             </ListItemButton>
           </List>
-        </div>
+        </Box>
       </Box>
     </footer>
   );
