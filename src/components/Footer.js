@@ -18,11 +18,9 @@ export default function Footer() {
       <Box
         sx={{
           display: "flex",
-          flexGrow: "1",
           backgroundColor: "slateblue",
           height: "150px",
-          justifyContent: "space-evenly",
-          bottom: 0
+          justifyContent: "space-evenly"
         }}>
         <div>
           <h2>Dunch Creative: Bringing the arts and tech together</h2>

@@ -1,0 +1,67 @@
+.container {
+  height: 95vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container img {
+  height: 500px;
+}
+
+.container .text {
+  width: 500px;
+  background-color: rgb(159, 159, 159, 0.8);
+}
+
+.background-video {
+  width: 100%;
+  z-index: -1;
+}
+
+.artist {
+  position: relative;
+}
+
+#artist-text {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  top: 35%;
+}
+
+.hiking {
+  height: 100%;
+  background-image: url("../../public/magog.JPG");
+  background-size: cover;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.stagger:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.stagger:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.stagger:nth-child(4) {
+  transition-delay: 600ms;
+}

@@ -1,4 +1,5 @@
 import { Card, Grid } from "@mui/material";
+// styles
 import "./Projects.css";
 
 // I want to refactor cardlist to be used here
