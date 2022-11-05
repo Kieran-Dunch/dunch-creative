@@ -1,17 +1,30 @@
 // import { Card } from "@mui/material";
+import { useEffect } from "react";
 import "./About.css";
 
 export default function About() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
     <div className="background">
       <div>
-        <h1 className="about-title">
-          This page will features several text boxes with three core paragraphs with photograph
-          banners and side images
-        </h1>
+        <h1 className="about-title hidden">About Kieran</h1>
       </div>
       <div>
-        <div className="container">
+        <div className="container hidden">
           <div>
             <h2>Developer</h2>
             <p className="text">
@@ -72,7 +85,7 @@ export default function About() {
       </div>
       <div className="hiking">
         <div className="container">
-          <div className="text">
+          <div className="text stagger hidden">
             <h2>Life</h2>
             <p>
               Kieran isn&apos;t just a coder and artist, he&apos;s also a backcountry camper! On his
@@ -83,8 +96,12 @@ export default function About() {
               self-improvement.
             </p>
           </div>
-          <img src="magog.JPG" alt="Kieran in front of a  glacier lake" />
-          <img src="Assiniboine.JPG" alt="Kieran in front of Mount Assiniboine" />
+          <img src="notch.jpg" alt="Kieran in front of a glacier lake" className="stagger hidden" />
+          <img
+            src="Assiniboine.JPG"
+            alt="Kieran in front of Mount Assiniboine"
+            className="stagger hidden"
+          />
         </div>
       </div>
     </div>
