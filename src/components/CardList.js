@@ -2,7 +2,7 @@ import { Card, CardContent, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import lottie from "lottie-web";
 import { useEffect } from "react";
-import Test from "../lotties/108322-circle-chart.json";
+import Discs from "../lotties/108322-circle-chart.json";
 import Rocket from "../lotties/116204-flying-rocket-in-the-sky.json";
 import Globe from "../lotties/69115-spinning-globe-orange.json";
 
@@ -12,8 +12,8 @@ export default function CardList() {
 
   useEffect(() => {
     lottie.loadAnimation({
-      container: document.querySelector("#test"),
-      animationData: Test
+      container: document.querySelector("#discs"),
+      animationData: Discs
     });
 
     lottie.loadAnimation({
@@ -41,7 +41,7 @@ export default function CardList() {
             I am a full stack web developer with a unique background as a theatre artist and
             producer
           </Typography>
-          <Box id="test"></Box>
+          <Box id="discs"></Box>
         </CardContent>
       </Card>
       <Card variant="outlined" sx={{ minWidth: "275px", height: "500px" }}>

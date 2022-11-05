@@ -2,8 +2,12 @@
 import { useEffect } from "react";
 import "./About.css";
 
+// TODO: convert all of this text and elements into MUI components
+// TODO: choose a fucking background for the site
+
 export default function About() {
   useEffect(() => {
+    // adding scroll animations, could move this to App.js to make it universal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         console.log(entry);
@@ -19,7 +23,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="background">
+    <>
       <div>
         <h1 className="about-title hidden">About Kieran</h1>
       </div>
@@ -104,6 +108,6 @@ export default function About() {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 }
