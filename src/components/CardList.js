@@ -28,9 +28,9 @@ export default function CardList() {
   }, []);
 
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} sx={{ p: "50px" }}>
       <Grid item xs={4}>
-        <Card variant="outlined" sx={{ minWidth: "275px", height: "500px", mx: "2" }}>
+        <Card variant="outlined" sx={{ minWidth: "275px", height: "500px" }}>
           <CardContent>
             <Typography variant="h6">
               I am a full stack web developer with a unique background as a theatre artist and
@@ -41,7 +41,7 @@ export default function CardList() {
         </Card>
       </Grid>
       <Grid item xs={4}>
-        <Card variant="outlined" sx={{ minWidth: "275px", height: "500px", mx: "2" }}>
+        <Card variant="outlined" sx={{ minWidth: "275px", height: "500px" }}>
           <CardContent>
             <Typography variant="h6">
               I bring my soft skills as a theatre producer into software development, building
@@ -52,7 +52,7 @@ export default function CardList() {
         </Card>
       </Grid>
       <Grid item xs={4}>
-        <Card variant="outlined" sx={{ minWidth: "275px", height: "500px", mx: "2" }}>
+        <Card variant="outlined" sx={{ minWidth: "275px", height: "500px" }}>
           <CardContent>
             <Typography variant="h6">
               My process begins with a conversation, and thrives in the world of creative problem
