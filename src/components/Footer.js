@@ -17,6 +17,7 @@ export default function Footer() {
   const pages = ["Home", "About", "Projects", "Contact"];
 
   return (
+    // <Box position="sticky" sx={{ width: "100%", position: "absolute", bottom: "0" }}>
     <footer>
       <Box
         sx={{
@@ -69,5 +70,6 @@ export default function Footer() {
         </Box>
       </Box>
     </footer>
+    // </Box>
   );
 }

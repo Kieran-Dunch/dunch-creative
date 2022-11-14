@@ -43,7 +43,7 @@ export default function CardList() {
             </Typography>
             <CardMedia id="lightbulb" style={{ margin: "75px" }}></CardMedia>
             <CardActions>
-              <Button color="primary" variant="contained">
+              <Button size="large" color="primary" variant="contained">
                 Learn more about me!
               </Button>
             </CardActions>
@@ -59,7 +59,7 @@ export default function CardList() {
             </Typography>
             <CardMedia id="rocket"></CardMedia>
             <CardActions>
-              <Button color="primary" variant="contained">
+              <Button size="large" color="primary" variant="contained" bottom>
                 See some of my projects!
               </Button>
             </CardActions>
@@ -75,8 +75,8 @@ export default function CardList() {
             </Typography>
             <CardMedia id="orbit"></CardMedia>
             <CardActions>
-              <Button color="primary" variant="contained">
-                Start a conversation!
+              <Button size="large" color="primary" variant="contained">
+                Start a conversation with me!
               </Button>
             </CardActions>
           </CardContent>
