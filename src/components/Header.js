@@ -9,7 +9,7 @@ export default function Header() {
         <Typed strings={["Dunch Creative:"]} typeSpeed={40}></Typed>
       </Typography>
       <Typography variant="h2">
-        <Typed strings={["Bringing the Arts and Tech together."]} typeSpeed={40}></Typed>
+        <Typed strings={["^2370 Bringing the Arts and Tech together."]} typeSpeed={40}></Typed>
       </Typography>
     </header>
   );
