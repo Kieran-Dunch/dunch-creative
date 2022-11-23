@@ -2,9 +2,8 @@ import CardList from "../components/CardList";
 import Header from "../components/Header";
 
 // TODO:
-// slow down orbit
-// center buttons on cardlist
-// make buttons on cardlist functional
+// my lotties are loading in multiple times
+// it's the feckin lightbulb
 
 export default function Home() {
   return (

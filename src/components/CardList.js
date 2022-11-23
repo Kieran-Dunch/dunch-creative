@@ -10,16 +10,17 @@ import {
 } from "@mui/material";
 import lottie from "lottie-web";
 import { useEffect } from "react";
-import LightBulb from "../lotties/blueLightbulb.json";
+import { Link } from "react-router-dom";
+// import LightBulb from "../lotties/blueLightbulb.json";
 import Rocket from "../lotties/bluerocket.json";
 import Orbit from "../lotties/blue.json";
 
 export default function CardList() {
   useEffect(() => {
-    const lightbulb = lottie.loadAnimation({
-      container: document.querySelector("#lightbulb"),
-      animationData: LightBulb
-    });
+    // const lightbulb = lottie.loadAnimation({
+    //   container: document.querySelector("#lightbulb"),
+    //   animationData: LightBulb
+    // });
 
     const rocket = lottie.loadAnimation({
       container: document.querySelector("#rocket"),
@@ -33,10 +34,10 @@ export default function CardList() {
 
     orbit.setSpeed(0.25);
     rocket.setSpeed(0.75);
-    lightbulb.setSpeed(0.75);
+    // lightbulb.setSpeed(0.75);
 
     return () => {
-      lightbulb.destroy();
+      // lightbulb.destroy();
       rocket.destroy();
       orbit.destroy();
     };
@@ -54,9 +55,11 @@ export default function CardList() {
             <Divider variant="middle" color="white" />
             <CardMedia id="lightbulb" sx={{ m: "75px" }}></CardMedia>
             <CardActions>
-              <Button size="large" color="primary" variant="contained" sx={{ m: "auto" }}>
-                Learn more about me!
-              </Button>
+              <Link to="/about" style={{ textDecoration: "none", color: "white", margin: "auto" }}>
+                <Button size="large" color="primary" variant="contained" sx={{ m: "auto" }}>
+                  Learn more about me!
+                </Button>
+              </Link>
             </CardActions>
           </CardContent>
         </Card>
@@ -71,9 +74,13 @@ export default function CardList() {
             <Divider variant="middle" color="white" />
             <CardMedia id="rocket"></CardMedia>
             <CardActions>
-              <Button size="large" color="primary" variant="contained" sx={{ m: "auto" }}>
-                See some of my projects!
-              </Button>
+              <Link
+                to="/projects"
+                style={{ textDecoration: "none", color: "white", margin: "auto" }}>
+                <Button size="large" color="primary" variant="contained" sx={{ m: "auto" }}>
+                  See some of my projects!
+                </Button>
+              </Link>
             </CardActions>
           </CardContent>
         </Card>
@@ -88,9 +95,13 @@ export default function CardList() {
             <Divider variant="middle" color="white" />
             <CardMedia id="orbit"></CardMedia>
             <CardActions>
-              <Button size="large" color="primary" variant="contained" sx={{ m: "auto" }}>
-                Start a conversation with me!
-              </Button>
+              <Link
+                to="/contact"
+                style={{ textDecoration: "none", color: "white", margin: "auto" }}>
+                <Button size="large" color="primary" variant="contained">
+                  Start a conversation with me!
+                </Button>
+              </Link>
             </CardActions>
           </CardContent>
         </Card>
