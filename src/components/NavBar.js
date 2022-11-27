@@ -25,23 +25,17 @@ const NavBar = () => {
             </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { md: "flex" }, justifyContent: "space-evenly" }}>
-            <Button sx={{ my: 2, color: "white", display: "block" }}>
-              <Link to="/about" style={{ textDecoration: "none", color: "white" }}>
-                About
-              </Link>
-            </Button>
-            <Button sx={{ my: 2, color: "white", display: "block" }}>
-              <Link to="/projects" style={{ textDecoration: "none", color: "white" }}>
-                Projects
-              </Link>
-            </Button>
+            <Link to="/about" style={{ textDecoration: "none", color: "white" }}>
+              <Button sx={{ my: 2, color: "white", display: "block" }}>About</Button>
+            </Link>
+            <Link to="/projects" style={{ textDecoration: "none", color: "white" }}>
+              <Button sx={{ my: 2, color: "white", display: "block" }}>Projects</Button>
+            </Link>
           </Box>
           <Box>
-            <Button sx={{ my: 2, color: "white", display: "block" }}>
-              <Link to="/contact" style={{ textDecoration: "none", color: "white" }}>
-                Contact Me
-              </Link>
-            </Button>
+            <Link to="/contact" style={{ textDecoration: "none", color: "white" }}>
+              <Button sx={{ my: 2, color: "white", display: "block" }}>Contact Me</Button>
+            </Link>
           </Box>
         </Toolbar>
       </Container>
