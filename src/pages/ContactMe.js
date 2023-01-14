@@ -1,16 +1,25 @@
 import { Button, Container, Paper, TextField, Typography } from "@mui/material";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { Box } from "@mui/system";
 import { useState } from "react";
+
+// styles
+import "./ContactMe.css";
 
 export default function ContactMe() {
   const form = useRef();
-  const [nameValue, setNameValue] = useState("");
+  const [firstNameValue, setFirstNameValue] = useState("");
+  const [lastNameValue, setLastNameValue] = useState("");
+  const [subjectLineValue, setSubjectLineValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
 
   const wipeForm = () => {
-    setNameValue("");
+    setFirstNameValue("");
+    setLastNameValue("");
+    setSubjectLineValue("");
     setEmailValue("");
     setMessageValue("");
   };
@@ -27,7 +36,7 @@ export default function ContactMe() {
       }
     );
     wipeForm();
-
+    setEmailSent(true);
     window.alert("Your message has been sent.");
   };
 
@@ -36,8 +45,14 @@ export default function ContactMe() {
       case "from_email":
         setEmailValue(e.target.value);
         break;
-      case "from_name":
-        setNameValue(e.target.value);
+      case "from_first_name":
+        setFirstNameValue(e.target.value);
+        break;
+      case "from_last_name":
+        setLastNameValue(e.target.value);
+        break;
+      case "subject_line":
+        setSubjectLineValue(e.target.value);
         break;
       case "message":
         setMessageValue(e.target.value);
@@ -48,42 +63,80 @@ export default function ContactMe() {
   };
 
   return (
-    <Container>
-      <Typography variant="h2"> Let’s see what we can create together!</Typography>
-      <Paper>
+    <Container sx={{ height: "82.5vh" }}>
+      <Typography variant="h2" sx={{ my: 4 }}>
+        Let’s see what we can create together!
+      </Typography>
+      <Paper id="contact" color="text">
         <form ref={form} onSubmit={sendEmail}>
-          <TextField
-            color="primary"
-            value={nameValue}
-            onChange={onChange}
-            label="Name"
-            name="from_name"
-            halfWidth
-            sx={{ my: 2, mx: 4 }}
-          />
+          <Typography variant="h4" sx={{ mb: 2 }}>
+            Send me an email below:
+          </Typography>
+          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <TextField
+              value={firstNameValue}
+              onChange={onChange}
+              color="text"
+              label="First Name"
+              name="from_first_name"
+              required
+              variant="filled"
+              sx={{ my: 2 }}
+            />
+            <TextField
+              value={lastNameValue}
+              onChange={onChange}
+              color="text"
+              label="Last Name"
+              name="from_last_name"
+              required
+              variant="filled"
+              sx={{ my: 2 }}
+            />
+          </Box>
           <TextField
             value={emailValue}
             onChange={onChange}
-            color="primary"
+            color="text"
             label="Email"
             name="from_email"
-            halfWidth
-            sx={{ my: 2, mx: 4 }}
+            fullWidth
+            required
+            variant="filled"
+            sx={{ my: 2 }}
+          />
+          <TextField
+            value={subjectLineValue}
+            onChange={onChange}
+            color="text"
+            label="Subject"
+            name="subject_line"
+            fullWidth
+            required
+            variant="filled"
+            sx={{ my: 2 }}
           />
           <TextField
             value={messageValue}
             onChange={onChange}
-            color="primary"
+            color="text"
             id="outlined-basic"
             label="Send me an email!"
-            variant="outlined"
             name="message"
             fullWidth
             multiline
+            required
+            variant="filled"
             rows={5}
             sx={{ my: 2 }}
           />
-          <Button type="submit" color="primary" sx={{ backgroundColor: "primary" }}>
+          <Button
+            type="submit"
+            variant="contained"
+            size="large"
+            disabled={emailSent}
+            color="primary"
+            sx={{ backgroundColor: "#24344d" }}>
             Submit
           </Button>
         </form>
