@@ -1,4 +1,4 @@
-import { Card, Grid, Typography } from "@mui/material";
+import { Card, Container, Grid, Typography } from "@mui/material";
 // styles
 import "./Projects.css";
 
@@ -34,7 +34,7 @@ export default function Projects() {
   ];
 
   return (
-    <>
+    <Container sx={{ height: "82.5vh" }}>
       <Typography variant="h2">My Projects</Typography>
       <Grid container spacing={3}>
         {projects.map((project) => (
@@ -54,6 +54,6 @@ export default function Projects() {
           </Grid>
         ))}
       </Grid>
-    </>
+    </Container>
   );
 }

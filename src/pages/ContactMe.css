@@ -1,0 +1,15 @@
+.MuiTextField-root {
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.MuiFilledInput-root {
+  color: #333 !important;
+}
+
+#contact {
+  background-color: #5893df;
+  height: 60%;
+  margin-top: 5rem;
+  padding: 5rem;
+}

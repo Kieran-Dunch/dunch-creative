@@ -3,6 +3,9 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
+// styles
+import "./ContactMe.css";
+
 export default function ContactMe() {
   const form = useRef();
   const [nameValue, setNameValue] = useState("");
@@ -48,38 +51,44 @@ export default function ContactMe() {
   };
 
   return (
-    <Container>
+    <Container sx={{ height: "82.5vh" }}>
       <Typography variant="h2"> Let’s see what we can create together!</Typography>
-      <Paper>
+      <Paper id="contact" color="text">
         <form ref={form} onSubmit={sendEmail}>
           <TextField
-            color="primary"
+            className="hello"
             value={nameValue}
             onChange={onChange}
+            color="text"
             label="Name"
             name="from_name"
             halfWidth
+            required
+            variant="filled"
             sx={{ my: 2, mx: 4 }}
           />
           <TextField
             value={emailValue}
             onChange={onChange}
-            color="primary"
+            color="text"
             label="Email"
             name="from_email"
             halfWidth
+            required
+            variant="filled"
             sx={{ my: 2, mx: 4 }}
           />
           <TextField
             value={messageValue}
             onChange={onChange}
-            color="primary"
+            color="text"
             id="outlined-basic"
             label="Send me an email!"
-            variant="outlined"
             name="message"
             fullWidth
             multiline
+            required
+            variant="filled"
             rows={5}
             sx={{ my: 2 }}
           />
