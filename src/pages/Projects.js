@@ -1,4 +1,4 @@
-import { Card, Container, Grid, Typography } from "@mui/material";
+import { Card, CardMedia, Container, Grid, Typography } from "@mui/material";
 // styles
 import "./Projects.css";
 
@@ -9,27 +9,33 @@ export default function Projects() {
   const projects = [
     {
       name: "Whats for Dinner",
-      desc: "Build your own cookbook, share recipes with friends, and more!"
+      desc: "Build your own cookbook, share recipes with friends, and more!",
+      img: "cover.png"
     },
     {
       name: "GrogU",
-      desc: "A Star Wars themed airbnb style application. Rent spaceships from across the galaxy!"
+      desc: "A Star Wars themed airbnb style application. Rent spaceships from across the galaxy!",
+      img: "grogu.jpeg"
     },
     {
       name: "Magic Memory",
-      desc: "Play this in-browser matching and memory game!"
+      desc: "Play this in-browser matching and memory game!",
+      img: "magic-memory.png"
     },
     {
       name: "Remixed",
-      desc: "Remixed is an app that uses an algorithm to build a playlist of stories, just for you."
+      desc: "Remixed is an app that uses an algorithm to build a playlist of stories, just for you.",
+      img: "remixed.png"
     },
     {
       name: "Fix-your-life",
-      desc: "Too busy to keep your team on-task during sprints or projects? Fix-your life is here for you!"
+      desc: "Too busy to keep your team on-task during sprints or projects? Fix-your life is here for you!",
+      img: "_MG_3186.JPG"
     },
     {
       name: "Finance Tracker",
-      desc: "Keep your finances on track with this React application."
+      desc: "Keep your finances on track with this React application.",
+      img: "Assiniboine.JPG"
     }
   ];
 
@@ -44,6 +50,7 @@ export default function Projects() {
             key={project.name}
             onClick={(e) => e.target.classList.toggle("flipped")}>
             <Card className="card">
+              <CardMedia image={project.img} sx={{ height: 140 }} />
               <Typography variant="h3" className="front">
                 {project.name}
               </Typography>
