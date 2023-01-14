@@ -9,12 +9,17 @@ import "./ContactMe.css";
 
 export default function ContactMe() {
   const form = useRef();
-  const [nameValue, setNameValue] = useState("");
+  const [firstNameValue, setFirstNameValue] = useState("");
+  const [lastNameValue, setLastNameValue] = useState("");
+  const [subjectLineValue, setSubjectLineValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
 
   const wipeForm = () => {
-    setNameValue("");
+    setFirstNameValue("");
+    setLastNameValue("");
+    setSubjectLineValue("");
     setEmailValue("");
     setMessageValue("");
   };
@@ -31,7 +36,7 @@ export default function ContactMe() {
       }
     );
     wipeForm();
-
+    setEmailSent(true);
     window.alert("Your message has been sent.");
   };
 
@@ -40,8 +45,14 @@ export default function ContactMe() {
       case "from_email":
         setEmailValue(e.target.value);
         break;
-      case "from_name":
-        setNameValue(e.target.value);
+      case "from_first_name":
+        setFirstNameValue(e.target.value);
+        break;
+      case "from_last_name":
+        setLastNameValue(e.target.value);
+        break;
+      case "subject_line":
+        setSubjectLineValue(e.target.value);
         break;
       case "message":
         setMessageValue(e.target.value);
@@ -53,12 +64,17 @@ export default function ContactMe() {
 
   return (
     <Container sx={{ height: "82.5vh" }}>
-      <Typography variant="h2"> Let’s see what we can create together!</Typography>
+      <Typography variant="h2" sx={{ my: 4 }}>
+        Let’s see what we can create together!
+      </Typography>
       <Paper id="contact" color="text">
         <form ref={form} onSubmit={sendEmail}>
+          <Typography variant="h4" sx={{ mb: 2 }}>
+            Send me an email below:
+          </Typography>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <TextField
-              value={nameValue}
+              value={firstNameValue}
               onChange={onChange}
               color="text"
               label="First Name"
@@ -68,7 +84,7 @@ export default function ContactMe() {
               sx={{ my: 2 }}
             />
             <TextField
-              value={nameValue}
+              value={lastNameValue}
               onChange={onChange}
               color="text"
               label="Last Name"
@@ -90,7 +106,7 @@ export default function ContactMe() {
             sx={{ my: 2 }}
           />
           <TextField
-            value={emailValue}
+            value={subjectLineValue}
             onChange={onChange}
             color="text"
             label="Subject"
@@ -114,7 +130,13 @@ export default function ContactMe() {
             rows={5}
             sx={{ my: 2 }}
           />
-          <Button type="submit" color="primary" sx={{ backgroundColor: "#24344d" }}>
+          <Button
+            type="submit"
+            variant="contained"
+            size="large"
+            disabled={emailSent}
+            color="primary"
+            sx={{ backgroundColor: "#24344d" }}>
             Submit
           </Button>
         </form>
