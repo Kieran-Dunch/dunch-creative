@@ -5,7 +5,7 @@ form {
 
 .MuiTextField-root {
   background-color: aliceblue;
-  border-radius: 5px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .MuiFilledInput-root {
@@ -14,7 +14,6 @@ form {
 
 #contact {
   background-color: #5893df;
-  height: 60%;
   padding: 5rem;
   width: 70%;
   margin: 0 auto;

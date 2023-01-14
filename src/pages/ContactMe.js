@@ -1,6 +1,7 @@
 import { Button, Container, Paper, TextField, Typography } from "@mui/material";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { Box } from "@mui/system";
 import { useState } from "react";
 
 // styles
@@ -55,28 +56,49 @@ export default function ContactMe() {
       <Typography variant="h2"> Let’s see what we can create together!</Typography>
       <Paper id="contact" color="text">
         <form ref={form} onSubmit={sendEmail}>
-          <TextField
-            className="hello"
-            value={nameValue}
-            onChange={onChange}
-            color="text"
-            label="Name"
-            name="from_name"
-            halfWidth
-            required
-            variant="filled"
-            sx={{ my: 2, mx: 4 }}
-          />
+          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <TextField
+              value={nameValue}
+              onChange={onChange}
+              color="text"
+              label="First Name"
+              name="from_first_name"
+              required
+              variant="filled"
+              sx={{ my: 2 }}
+            />
+            <TextField
+              value={nameValue}
+              onChange={onChange}
+              color="text"
+              label="Last Name"
+              name="from_last_name"
+              required
+              variant="filled"
+              sx={{ my: 2 }}
+            />
+          </Box>
           <TextField
             value={emailValue}
             onChange={onChange}
             color="text"
             label="Email"
             name="from_email"
-            halfWidth
+            fullWidth
             required
             variant="filled"
-            sx={{ my: 2, mx: 4 }}
+            sx={{ my: 2 }}
+          />
+          <TextField
+            value={emailValue}
+            onChange={onChange}
+            color="text"
+            label="Subject"
+            name="subject_line"
+            fullWidth
+            required
+            variant="filled"
+            sx={{ my: 2 }}
           />
           <TextField
             value={messageValue}
@@ -92,7 +114,7 @@ export default function ContactMe() {
             rows={5}
             sx={{ my: 2 }}
           />
-          <Button type="submit" color="primary" sx={{ backgroundColor: "primary" }}>
+          <Button type="submit" color="primary" sx={{ backgroundColor: "#24344d" }}>
             Submit
           </Button>
         </form>
