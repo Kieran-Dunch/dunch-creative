@@ -1,5 +1,5 @@
 // import { Card } from "@mui/material";
-import { Box, Typography } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import { useEffect } from "react";
 import "./About.css";
 
@@ -25,14 +25,14 @@ export default function About() {
 
   return (
     <>
-      <Typography variant="h2" className="about-title stagger hidden">
+      <Typography variant="h2" className="about-title">
         About Kieran
       </Typography>
       <Box>
         <Box className="container">
-          <Box>
+          <Card>
             <Typography variant="h4">Developer</Typography>
-            <Typography className="hidden">
+            <Typography>
               Kieran Dunch is a full stack web developer with an interesting background. After
               pursuing theatre producing and performing as an artist for many years, he turned to an
               entirely new challenge: Software Engineering. One whirlwind bootcamp education from Le
@@ -41,14 +41,14 @@ export default function About() {
               understandable for his non-technical clients. If you are looking for someone with both
               interpersonal skills and technical know-how, Kieran is the person for your team.
             </Typography>
-            <Typography className="hidden">
+            <Typography>
               Dunch Creative focuses on work that bridges the gap between live arts and
               technology.Kieran is passionate about using software to unlock the potential for found
               space art, interactive performance and art installation. His background in education
               makes him a great consultant for arts education initiatives as well. Want to know more
               about Kieran&apos;s technical skills? Check out his resumé.
             </Typography>
-          </Box>
+          </Card>
           <img
             src="Kieran_mic_pic.jpeg"
             alt="Kieran holding a microphone speaking to a crowd"
