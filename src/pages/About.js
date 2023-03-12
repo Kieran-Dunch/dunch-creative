@@ -92,9 +92,11 @@ export default function About() {
       </Box>
       <Box className="hiking">
         <Box className="container">
-          <Box className="stagger hidden">
-            <Typography variant="h4">Life</Typography>
-            <Typography>
+          <Card sx={{ p: "50px", m: "50px", width: "50%" }}>
+            <Typography variant="h4" className="fade">
+              Life
+            </Typography>
+            <Typography variant="h6" className="fade">
               Kieran isn&apos;t just a coder and artist, he&apos;s also a backcountry camper! On his
               blog Backpacking Boi, Kieran reviews trails and equipment for backcountry camping and
               other outdoor sports. He loves surfing, rock climbing, bouldering and cross-country
@@ -102,13 +104,20 @@ export default function About() {
               international award for outdoor activity, volunteer service, physical activity and
               self-improvement.
             </Typography>
+          </Card>
+          <Box className="stagger hidden">
+            <img
+              id="notch"
+              src="notch.jpg"
+              alt="The famous 'notch' of the Skyline Trail in Jasper, Alberta."
+            />
+            <img
+              id="assiniboine"
+              src="Assiniboine.JPG"
+              alt="Kieran in front of Mount Assiniboine"
+              className="stagger hidden"
+            />
           </Box>
-          <img src="notch.jpg" alt="Kieran in front of a glacier lake" className="stagger hidden" />
-          <img
-            src="Assiniboine.JPG"
-            alt="Kieran in front of Mount Assiniboine"
-            className="stagger hidden"
-          />
         </Box>
       </Box>
     </>

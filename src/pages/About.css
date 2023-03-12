@@ -35,6 +35,16 @@
   margin: 100px;
 }
 
+#assiniboine {
+  margin: 10px;
+  height: 350px;
+}
+
+#notch {
+  margin: 10px;
+  height: 350px;
+}
+
 .hiking {
   height: 100%;
   background-image: url("../../public/magog.JPG");
