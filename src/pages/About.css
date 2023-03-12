@@ -6,6 +6,7 @@
 
 .container img {
   height: 500px;
+  margin: 50px;
 }
 
 .container .text {
@@ -26,7 +27,12 @@
   position: absolute;
   display: flex;
   justify-content: space-around;
-  top: 35%;
+  top: 5%;
+}
+
+#AWAD-whale {
+  height: 350px;
+  margin: 100px;
 }
 
 .hiking {
@@ -39,6 +45,12 @@
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-50%);
+  transition: all 1s;
+}
+
+.fade {
+  opacity: 0;
+  filter: blur(5px);
   transition: all 1s;
 }
 
