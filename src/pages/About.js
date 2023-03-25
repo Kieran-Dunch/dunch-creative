@@ -17,36 +17,35 @@ export default function About() {
     });
     const slideElements = document.querySelectorAll(".hidden");
     const fadeElements = document.querySelectorAll(".fade");
+    const artistFadeElements = document.querySelectorAll(".artist-fade");
+    artistFadeElements.forEach((el) => observer.observe(el));
     slideElements.forEach((el) => observer.observe(el));
     fadeElements.forEach((el) => observer.observe(el));
   }, []);
 
   return (
     <>
-      <Typography variant="h2" className="about-title">
+      <Typography variant="h2" className="about-title" sx={{ my: 4 }}>
         About Kieran
       </Typography>
       <Box>
         <Box className="container">
-          <Card sx={{ p: "50px", m: "50px" }}>
+          <Card sx={{ p: "2em", m: "2em", width: "50%", minHeight: "50%" }}>
             <Typography variant="h4" className="fade">
               Developer
             </Typography>
             <Typography variant="h6" sx={{ py: "10px" }} className="fade">
               Kieran Dunch is a full stack web developer with an interesting background. After
-              pursuing theatre producing and performing as an artist for many years, he turned to an
-              entirely new challenge: Software Engineering. One whirlwind bootcamp education from Le
-              Wagon later, Kieran launched Dunch Creative. His well-developed communication skills
-              make him an excellent addition to any team, and he specializes in making software
-              understandable for his non-technical clients. If you are looking for someone with both
-              interpersonal skills and technical know-how, Kieran is the person for your team.
+              pursuing theatre producing and performing for many years, he turned to an entirely new
+              challenge: Software Engineering. One diploma from Le Wagon Web Development Bootcamp
+              later, Kieran launched Dunch Creative. Since then he has worked in many different
+              roles, such as product owner, consultant, and full stack developer.
             </Typography>
             <Typography variant="h6" className="fade">
               Dunch Creative focuses on work that bridges the gap between live arts and technology.
               Kieran is passionate about using software to unlock the potential for found space art,
-              interactive performance and art installation. His background in education makes him a
-              great consultant for arts education initiatives as well. Want to know more about
-              Kieran&apos;s technical skills? Check out his resumé.
+              interactive performance and art installation. Want to know more about Kieran&apos;s
+              technical skills? Check out his resumé.
             </Typography>
           </Card>
           <img
@@ -62,32 +61,26 @@ export default function About() {
             <source src="WoyzeckTrailer.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        </Box>
-        <Box id="artist-text">
+          <Typography variant="h4" className="fade artist-title">
+            Artist
+          </Typography>
           <img
             id="AWAD-whale"
             src="AWAD-whale.JPG"
             alt="A ten foot long Orca Whale puppet made from plastic bags"
-            className="hidden"
+            className="artist-fade"
           />
-          <Card sx={{ p: "50px", m: "50px" }}>
-            <Typography variant="h4" className="fade">
-              Artist
-            </Typography>
+          <Box id="artist-text">
             <Typography variant="h6" className="fade">
-              Kieran is a Theatre graduate of the University of Victoria, where he specialized in
-              acting, directing, and applied theatre. Kieran&apos;s work as a director is focused on
-              ensemble-based creation, typically in an immersive environment. Most recently, Kieran
-              co-directed <em>Are We All Dead?</em>, a performance piece using theatre strategies
-              from 1930&apos;s Canadian agit-prop to address the climate crisis.
+              <em>
+                Kieran is a Theatre graduate of the University of Victoria, where he specialized in
+                acting, directing, and applied theatre. Kieran&apos;s work as a director is focused
+                on ensemble-based creation. Kieran is not only an international director/performer
+                but is an arts administrator as well. Kieran most recently worked for Geordie
+                Theatre as their Associate Producer for several years.
+              </em>
             </Typography>
-            <Typography variant="h6" sx={{ py: "10px" }} className="fade">
-              Kieran is not only an international director/performer but is an arts administrator as
-              well. Most recently Kieran worked as the Managing Producer of Theatre SKAM&apos;s
-              Pop-Up Theatre in Victoria, BC. He then worked for Geordie Theatre as their Associate
-              Producer for several years.
-            </Typography>
-          </Card>
+          </Box>
         </Box>
       </Box>
       <Box className="hiking">

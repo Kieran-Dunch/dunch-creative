@@ -35,7 +35,9 @@ export default function Projects() {
 
   return (
     <Container sx={{ height: "82.5vh" }}>
-      <Typography variant="h2">My Projects</Typography>
+      <Typography variant="h2" sx={{ my: 4 }}>
+        My Projects
+      </Typography>
       <Grid container spacing={3}>
         {projects.map((project) => (
           <Grid
