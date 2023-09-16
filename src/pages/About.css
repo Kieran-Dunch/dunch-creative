@@ -30,6 +30,7 @@
   position: absolute;
   top: 65%;
   margin: 10px;
+  border-radius: 2px;
   padding: 10px 20px;
   background-color: rgba(33, 33, 33, 0.8);
 }
