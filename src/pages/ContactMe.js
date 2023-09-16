@@ -63,11 +63,11 @@ export default function ContactMe() {
   };
 
   return (
-    <Container sx={{ height: "82.5vh" }}>
+    <Container>
       <Typography variant="h2" sx={{ my: 4 }}>
         Let’s see what we can create together!
       </Typography>
-      <Paper id="contact" color="text">
+      <Paper id="contact">
         <form ref={form} onSubmit={sendEmail}>
           <Typography variant="h4" sx={{ mb: 2 }}>
             Send me an email below:
