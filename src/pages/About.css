@@ -6,6 +6,7 @@
 
 .container img {
   height: 500px;
+  margin: 50px;
 }
 
 .container .text {
@@ -16,17 +17,45 @@
 .background-video {
   width: 100%;
   z-index: -1;
+  position: absolute;
 }
 
-.artist {
-  position: relative;
+.artist-title {
+  position: absolute;
+  top: 5%;
+  width: 100%;
 }
 
 #artist-text {
   position: absolute;
-  display: flex;
-  justify-content: space-around;
-  top: 35%;
+  top: 65%;
+  margin: 10px;
+  border-radius: 2px;
+  padding: 10px 20px;
+  background-color: rgba(33, 33, 33, 0.8);
+}
+
+.artist-fade {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 3s 10s;
+}
+
+#AWAD-whale {
+  height: 350px;
+  margin: 100px;
+  position: absolute;
+  left: 0;
+}
+
+#assiniboine {
+  margin: 10px;
+  height: 350px;
+}
+
+#notch {
+  margin: 10px;
+  height: 350px;
 }
 
 .hiking {
@@ -39,6 +68,12 @@
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-50%);
+  transition: all 1s;
+}
+
+.fade {
+  opacity: 0;
+  filter: blur(5px);
   transition: all 1s;
 }
 

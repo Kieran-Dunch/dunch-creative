@@ -16,6 +16,7 @@ import Rocket from "../lotties/bluerocket.json";
 import Orbit from "../lotties/blue.json";
 
 // components is not using responsive units of measurement
+// TODO: make responsive
 
 export default function CardList() {
   useEffect(() => {
